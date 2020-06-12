@@ -6,6 +6,8 @@ metropolis_hastings_symmetric <- function(p, q, n) {
 
     # chain vector
     chain <- rep(NA, n)
+    # accpetance vector
+    accepted <- rep(1, n)
     # initial guess
     chain[1] <- q(1) # 1 sample from Q (could be anything though)
     # loop
@@ -26,9 +28,10 @@ metropolis_hastings_symmetric <- function(p, q, n) {
             chain[i] <- x.prop # accept
         } else {
             chain[i] <- chain[i-1] # reject
+            accepted[i] <- 0
         }
     }
-    return(chain)
+    return(list(chain=chain, acceptance=accepted))
 }
 
 # example ---------------------------------------------------
@@ -44,12 +47,12 @@ alpha <- 2.7
 beta <- 6.3
 p <- function(x) dbeta(x, shape1 = alpha, shape2 = beta)
 q <- function(k) runif(k) # proposed distribution 
-chain <- metropolis_hastings(p, q, n)
+results <- metropolis_hastings(p, q, n)
 
-acc_ratio <- mean(accepted) # acceptance ratio
-dens <- p(chain) # calculating the target distribution for the generated chain
+acc_ratio <- mean(results$accepted) # acceptance ratio
+dens <- p(results$chain) # calculating the target distribution for the generated chain
 
-df <- data.frame(x = chain, dens = dens)
+df <- data.frame(x = results$chain, dens = dens)
 
 # plotting
 
