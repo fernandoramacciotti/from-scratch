@@ -47,7 +47,7 @@ q <- function(k) runif(k) # proposed distribution
 chain <- metropolis_hastings(p, q, n)
 
 acc_ratio <- mean(accepted) # acceptance ratio
-dens <- p(x) # calculating the target distribution for the generated chain
+dens <- p(chain) # calculating the target distribution for the generated chain
 
 df <- data.frame(x = x, dens = dens)
 
