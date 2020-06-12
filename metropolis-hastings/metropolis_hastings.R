@@ -31,7 +31,7 @@ metropolis_hastings_symmetric <- function(p, q, n) {
             accepted[i] <- 0
         }
     }
-    return(list(chain=chain, acceptance=accepted))
+    return(list(chain=chain, accepted=accepted))
 }
 
 # example ---------------------------------------------------
