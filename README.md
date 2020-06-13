@@ -2,7 +2,6 @@
 
 Implementations of algorithms from scratch, with little aid from packages as possible. The goal is to understand how the algorithms/models work under the hood.
 
----
 # Algorithms
 
 * **Statistics and Machine Learning**
