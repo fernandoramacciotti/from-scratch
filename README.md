@@ -6,8 +6,8 @@ Implementations of algorithms from scratch, with little as aid from packages as 
 
 * **Statistics and Machine Learning**
     * [Logistic Regression](./logistic_regression/logistic_regression.py): Logistic Regression with gradient descent
-    * [Boosting](./bosting/vanilla-boosting.py): A vanilla implementation of gradient boosting
+    * [Boosting](./bosting/vanilla_boosting.py): A vanilla implementation of gradient boosting
 
 * **MCMC Samplers**
-    * [Metropolis-Hastings](./metropolis_hastings/metropolis_hastings.R): Metropolis-Hastings algorithm with symmetrical proposal distribution
-    * [Random-Walk Metropolis-Hastings](./metropolis_hastings/random_walk_mh.R): Standard Random-Walk Metropolis Hastings, generalize to be multidimensional.
+    * [Metropolis-Hastings](./metropolis_hastings/mh.R): Metropolis-Hastings algorithm with symmetrical proposal distribution
+    * [Random-Walk Metropolis-Hastings](./metropolis_hastings/rwmh.R): Standard Random-Walk Metropolis Hastings, generalize to be multidimensional.
