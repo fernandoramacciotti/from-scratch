@@ -73,8 +73,10 @@ class LogisticRegression:
         self.is_fitted = True
 
     def predict_proba(self, X):
-        h = self._sigmoid(np.dot(X, self.coef_))
-        return h
+        # intercept
+        if self.intercept:
+            X = self._add_intercept(X)
+        return self._sigmoid(np.dot(X, self.coef_))
 
     def predict(self, X):
         return (self.predict_proba(X) > 0.5) * 1
