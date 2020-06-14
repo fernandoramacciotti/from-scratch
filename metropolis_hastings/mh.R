@@ -1,8 +1,9 @@
-metropolis_hastings_symmetric <- function(p, q, n) {
+metropolis_hastings_symmetric <- function(p, q, n, brunin) {
     # symmetric proposal distribution
     # p target density
     # q proposed density
     # N number of iterations
+    # burnin initial samples to discard
 
     # chain vector
     chain <- rep(NA, n)
@@ -31,7 +32,8 @@ metropolis_hastings_symmetric <- function(p, q, n) {
             accepted[i] <- 0
         }
     }
-    return(list(chain=chain, accepted=accepted))
+    return(list(chain=chain[(burnin + 1):n], 
+                accepted=accepted[(burnin + 1):n]))
 }
 
 # example ---------------------------------------------------
