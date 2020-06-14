@@ -1,6 +1,6 @@
 # from-scratch
 
-Implementations of algorithms from scratch, with little aid from packages as possible. The goal is to understand how the algorithms/models work under the hood.
+Implementations of algorithms from scratch, with little as aid from packages as possible. The goal is to understand how the algorithms/models work under the hood.
 
 # Algorithms
 
