@@ -1,9 +1,10 @@
-rwmh <-  function(p, n = 1e3, x0 = 0, sd = 1) {
+rwmh <-  function(p, n = 1e3, x0 = 0, sd = 1, burnin = 200) {
   # random walk metroplis-hastings
   # p target density
   # n number of iterations
   # x0 initial guess (can be multidimensional)
   # sd innovation variance (random walk variance)
+  # burnin initial samples to discard
   
   # dimesion
   dim <- length(x0)
@@ -37,5 +38,6 @@ rwmh <-  function(p, n = 1e3, x0 = 0, sd = 1) {
       accepted[i] <- 0
     }
   }
-  return(list(chain=chain, accepted=accepted))
+  return(list(chain=chain[(burnin + 1):n], 
+              accepted=accepted[(burnin + 1):n]))
 }
