@@ -10,4 +10,4 @@ Implementations of algorithms from scratch, with little as aid from packages as 
 
 * **MCMC Samplers**
     * [Metropolis-Hastings](./metropolis_hastings/mh.R): Metropolis-Hastings algorithm with symmetrical proposal distribution
-    * **Random-Walk Metropolis-Hastings**[[R](./metropolis_hastings/rwmh.R) | [Julia](./metropolis_hastings/rwmh.jl)]: Standard Random-Walk Metropolis Hastings, generalized to be multidimensional.
+    * **Random-Walk Metropolis-Hastings** [[R](./metropolis_hastings/rwmh.R) | [Julia](./metropolis_hastings/rwmh.jl) | [C++](./metropolis_hastings/rwmh.cpp)]: Standard Random-Walk Metropolis Hastings, generalized to be multidimensional.
