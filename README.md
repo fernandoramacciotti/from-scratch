@@ -4,6 +4,13 @@ Implementations of algorithms from scratch, with little as aid from packages as 
 
 # Algorithms
 
+* **Operations Research**
+    * [Kruskal](./operations_research/kruskal.py): Kruskal algorithm to find minimum spanning tree in a graph
+    * [Dijkstra](./operations_research/dijkstra.py): Dijkstra algorithm to find minimum path in a graph
+    * [Floyd-Warshall](./operations_research/floyd_warshall.py): Floyd-Warshall algorithm to find minimum path in a graph
+    * [Ford-Fulkerson](./operations_research/ford_fulkerson.py): Ford-Fulkerson algorithm to find maximum network flow
+    * [Critical Path Method](./operations_research/critical_path_method.py): Critical Path Method (CPM) algorithm to find a critical schedule for a project
+
 * **Statistics and Machine Learning**
     * [Logistic Regression](./logistic_regression/logistic_regression.py): Logistic Regression with gradient descent
     * [Boosting](./bosting/vanilla_boosting.py): A vanilla implementation of gradient boosting
